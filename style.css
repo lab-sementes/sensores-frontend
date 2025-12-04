@@ -27,17 +27,15 @@ header {
     padding: 15px 30px;
     border-bottom: 1px solid var(--cor-borda);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .header-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 20px;
     width: 100%;
-    max-width: 1400px; /* Largura máxima do conteúdo */
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .header-content h1 {
