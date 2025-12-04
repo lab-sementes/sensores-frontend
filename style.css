@@ -23,7 +23,7 @@ body {
    CONFIGURAÇÕES DO HEADER
    ========================================================================== */
 header {
-    background-color: #ffffff;
+    background-color: var(--cor-fundo-header);
     padding: 15px 30px;
     border-bottom: 1px solid var(--cor-borda);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
