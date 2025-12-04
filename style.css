@@ -50,10 +50,48 @@ header {
 .header-content-logo { 
     height: 30px; 
     width: auto; 
-    margin-right: 15px; 
+    justify-self: start;
 }
 
-/* 3. Seletor de Salas */
+.header-content-actions {
+    justify-self: end;
+    display: flex;
+    gap: 10px;
+}
+
+.header-content-actions-config-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--cor-primaria);
+    background: transparent;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.header-content-actions-config-button:hover {
+    color: var(--cor-verde-setrem);
+    transform: scale(1.1);
+}
+
+.header-content-actions-config-button:active {
+    transform: scale(0.95);
+}
+
+.header-content-actions-config-button a {
+    color: inherit;
+    text-decoration: none;   
+}
+
+/* ==========================================================================
+   CONFIGURAÇÕES DO MENU DE SENSORES
+   ========================================================================== */
+
+
+
 .room-selector-container {
     max-width: 1400px;
     margin: 20px auto 0 auto;
