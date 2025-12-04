@@ -4,6 +4,7 @@
 :root {
     --cor-primaria: #002f6c;
     --cor-fundo: #f4f7fa;
+    --cor-fundo-header: #ffffff;
     --cor-texto: #333;
     --cor-sombra: rgba(0, 0, 0, 0.08);
     --cor-borda: #e0e0e0;
