@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Lab Sementes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/configurar-sensores.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="../assets/images/logo-setrem.png" alt="Logo da Setrem" class="header-content-logo">
+            
+            <h1><i class="mdi mdi-cog"></i> Configurações</h1>
+        
+            <div class="header-content-actions">
+                <a href="../index.html" class="header-content-actions-config-button" title="Voltar ao Painel">
+                    <span class="mdi mdi-home"></span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="form-card">
+            <h2 class="form-title">Adicionar / Editar Sensor</h2>
+            
+            <form id="sensor-form">
+                <input type="hidden" id="sensor-id"> <div class="form-grid">
+                    <div class="form-group">
+                        <label for="sensor-name">Nome do Sensor</label>
+                        <input type="text" id="sensor-name" placeholder="Ex: Sensor Geladeira 1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sensor-type">Tipo</label>
+                        <select id="sensor-type" required>
+                            <option value="DHT11">DHT11</option>
+                            <option value="DHT22">DHT22</option>
+                            <option value="DS18B20">DS18B20</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="unique-address">Endereço (MAC/ID)</label>
+                        <input type="text" id="unique-address" placeholder="Ex: 48:55:19:..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sala">Sala / Local</label>
+                        <input type="text" id="sala" placeholder="Ex: Amostras" required>
+                    </div>
+                </div>
+
+                <div class="limits-section">
+                    <h3 class="limits-title"><i class="mdi mdi-ruler"></i> Limites de Tolerância (ISO)</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Temp. Mínima (°C)</label>
+                            <input type="number" id="temp-min" step="0.1" placeholder="--">
+                        </div>
+                        <div class="form-group">
+                            <label>Temp. Máxima (°C)</label>
+                            <input type="number" id="temp-max" step="0.1" placeholder="--">
+                        </div>
+                        <div class="form-group">
+                            <label>Umid. Mínima (%)</label>
+                            <input type="number" id="umid-min" step="0.1" placeholder="--">
+                        </div>
+                        <div class="form-group">
+                            <label>Umid. Máxima (%)</label>
+                            <input type="number" id="umid-max" step="0.1" placeholder="--">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button type="submit" class="btn-submit">Salvar Configuração</button>
+                    <button type="button" class="btn-submit btn-clear" onclick="limparFormulario()">Limpar / Novo</button>
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2 class="form-title">Sensores Cadastrados</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Tipo</th>
+                            <th>Sala</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-sensores-body">
+                        </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="../js/configurar-sensores.js"></script>
+</body>
+</html>

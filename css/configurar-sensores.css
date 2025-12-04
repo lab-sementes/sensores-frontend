@@ -1,0 +1,90 @@
+
+
+.container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        
+/* Card do Formulário */
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.form-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-primaria, #0a4a8f);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group label { font-size: 0.9rem; font-weight: 600; color: #555; }
+.form-group input, .form-group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+/* Área de Limites (ISO) */
+.limits-section {
+    grid-column: 1 / -1; /* Ocupa toda a largura */
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+.limits-title { font-size: 0.95rem; font-weight: bold; color: #666; margin-bottom: 15px; }
+
+.btn-submit {
+    background-color: var(--cor-verde-setrem, #28a745);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    width: 100%;
+    transition: opacity 0.2s;
+}
+
+.btn-submit:hover { 
+    opacity: 0.9; 
+}
+
+
+.btn-clear {
+    background-color: #6c757d;
+    margin-top: 10px;
+}
+
+/* Tabela de Listagem */
+.table-container { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+th { background-color: var(--cor-primaria, #0a4a8f); color: white; font-weight: 500; }
+tr:hover { background-color: #f9f9f9; }
+        
+.action-btn {
+    background: none; border: none; cursor: pointer; font-size: 1.2rem; margin-right: 10px;
+    transition: transform 0.2s;
+}
+.action-btn:hover { transform: scale(1.2); }
+.edit-btn { color: #f39c12; }
+.delete-btn { color: #e74c3c; }
+        
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+.badge-ativo { background-color: #d4edda; color: #155724; }
+.badge-inativo { background-color: #f8d7da; color: #721c24; }
