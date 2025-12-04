@@ -41,7 +41,10 @@ header {
 .header-content h1 {
     margin: 0;
     font-size: 1.8rem;
-    color: #28a745; /* Cor verde do título (Revisado) */
+    color: var(--cor-verde-setrem);
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
 }
 
 /* Tamanho da logo (Revisado) */
