@@ -1,4 +1,6 @@
-/* 1. Configuração Global e Fonte */
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
 :root {
     --cor-primaria: #0a4a8f;
     --cor-fundo: #f4f7fa;
@@ -15,7 +17,9 @@ body {
     margin: 0;
 }
 
-/* 2. Header e Logo */
+/* ==========================================================================
+   CONFIGURAÇÕES DO HEADER
+   ========================================================================== */
 header {
     background-color: #ffffff;
     padding: 15px 30px;
@@ -55,7 +59,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Quebra linha em telas pequenas */
+    flex-wrap: wrap;
     gap: 15px;
 }
 
